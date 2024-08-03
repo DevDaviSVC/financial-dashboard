@@ -1,9 +1,10 @@
 {
-    "transactions": [
-        {
-            "id": 1,
-            "name": "test",
-            "value": 20
-        }
-    ]
+  "transactions": [
+    {
+      "id": "efcd",
+      "name": "Transaction example",
+      "type": "Deposit",
+      "value": 279
+    }
+  ]
 }

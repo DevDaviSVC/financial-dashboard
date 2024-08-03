@@ -6,7 +6,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link href="css/style.css" rel="stylesheet" />
+        <!-- Importing styles and fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
         <title>Financial Dashboard v1</title>
 
@@ -15,10 +18,57 @@
     <body>
 
         <div id="root">
-            <div id="transactions-list">
-                <div class="transaction">
-                    <h2>Name</h2>
-                    <span>R$value</span>
+            <h1 class="heading">Financial Dashboard</h1>
+            <div class="app-wraper">
+                <div id="resume-dashboard">
+                    <div class="dashboard-group">
+                        <h2>Balance</h2>
+                        <span id="balance-el">R$ value</span>
+                    </div>
+
+                    <div class="dashboard-group">
+                        <h2>Profit</h2>
+                        <span id="profit-el">R$ value</span>
+                    </div>
+
+                    <div class="dashboard-group">
+                        <h2>Debts</h2>
+                        <span id="debts-el">R$ value</span>
+                    </div>
+                </div>
+
+                <div class="transactions-wraper">
+                    <div id="new-transaction" class="inf-group">
+                        <h3 class="group-heading">Make a new Transaction</h3>
+                        <form id="default">
+                            <div class="input-wraper">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" required>
+                            </div>
+
+                            <div class="input-wraper">
+                                <label for="value">Value</label>
+                                <input type="number" name="value" id="value" required>
+                            </div>
+
+                            <div class="input-wraper">
+                                <label for="type">Transaction type</label>
+                                <select name="type" id="type">
+                                    <option value="Deposit" selected>Deposit</option>
+                                    <option value="Withdraw">Withdraw</option>
+                                </select>
+                            </div>
+
+                            <button type="submit">Transaction</button>
+                        </form>
+                    </div>
+
+                    <div class="inf-group transaction-list-wraper">
+                        <h3 class="group-heading">Transactions History</h3>
+                        <div id="transactions-list">
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
